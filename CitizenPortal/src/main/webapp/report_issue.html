@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Portal - Report Issue</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report_issue.html">Report Issue</a></li>
+            <li><a href="feedback.html">Provide Feedback</a></li>
+            <li><a href="updates.html">View Updates</a></li>
+            <li><a href="logout">Logout</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2>Report an Issue</h2>
+        <form action="reportIssue" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="politician_id">Politician ID / Update Info:</label>
+                <input type="text" id="politician_id" name="politician_id" required placeholder="Enter the politician ID or update info">
+            </div>
+            <div class="form-group">
+                <label for="issue_description">Describe the Issue:</label>
+                <textarea id="issue_description" name="issue_description" rows="10" cols="50" required placeholder="Describe the issue"></textarea>
+            </div>
+             <div class="form-group">
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" required>
+    </div>
+            <button type="submit">Submit Issue</button>
+        </form>
+    </div>
+
+    <script>
+        // Load the taskbar into the div
+        document.getElementById("taskbar").innerHTML = `<div class="taskbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="updates.html">View Updates</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="report_issue.html">Report Issue</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>`;
+    </script>
+</body>
+</html>

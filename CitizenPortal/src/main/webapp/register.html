@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Portal - Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function validateForm() {
+            const emailField = document.getElementById('email');
+            const passwordField = document.getElementById('password');
+
+            // Regex for email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Regex for password: minimum 8 characters, at least one number and one special character
+            const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+            if (!emailRegex.test(emailField.value)) {
+                alert("Please enter a valid email address!");
+                return false;
+            }
+
+            if (!passwordRegex.test(passwordField.value)) {
+                alert("Password must be at least 8 characters long, contain at least one number and one special character!");
+                return false;
+            }
+
+            return true; // Form is valid
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Register for Citizen Portal</h2>
+        <form action="register" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+            </div>
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

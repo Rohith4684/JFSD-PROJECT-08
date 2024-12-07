@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="css/adminstyle.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="admin-home.html">Home</a></li>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="view_issuesadmin.jsp">View Issues</a></li>
+            <li><a href="view_feedbackadmin.html">View Feedback</a></li>
+            <li><a href="view_updatesaadmin.html">View Updates</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Manage Users</h2>
+        <form action="deleteUser" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User list will be populated by the servlet -->
+                    <!-- Sample data -->
+                    <tr>
+                        <td>john_doe</td>
+                        <td>john@example.com</td>
+                        <td>
+                            <button type="submit" name="deleteUser" value="john_doe">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more user rows as needed -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>
